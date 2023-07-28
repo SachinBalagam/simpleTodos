@@ -1,3 +1,7 @@
+import {Component} from 'react'
+import TodoItem from '../TodoItem'
+import './index.css'
+
 const initialTodosList = [
   {
     id: 1,
@@ -33,4 +37,34 @@ const initialTodosList = [
   },
 ]
 
-// Write your code here
+class SimpleTodos extends Component {
+  state = {todoList: initialTodosList}
+
+  onTodoDelete = id => {
+    const {todoList} = this.state
+    const filteredUserData = todoList.filter(eachUser => eachUser.id !== id)
+    this.setState({todoList: filteredUserData})
+  }
+
+  render() {
+    const {todoList} = this.state
+    return (
+      <div className="bg-container">
+        <div className="card">
+          <h1 className="title">Simple Todos</h1>
+          <ul>
+            {todoList.map(eachUser => (
+              <TodoItem
+                todoList={eachUser}
+                key={eachUser.id}
+                TodoDelete={this.onTodoDelete}
+              />
+            ))}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default SimpleTodos

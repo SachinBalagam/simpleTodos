@@ -1,1 +1,21 @@
 /* Write your CSS here */
+.each-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.each-title {
+  font-size: 20px;
+  margin-right: 10px;
+  font-family: 'Roboto';
+}
+.each-button {
+  background-color: transparent;
+  border: 1px solid #ff0b37;
+  color: #ff0b37;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}

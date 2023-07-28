@@ -1,1 +1,20 @@
 /* Write your CSS here */
+.bg-container {
+  min-height: 100vh;
+  background-color: #ffc2a0;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 50%;
+}
+.title {
+  font-family: 'Roboto';
+  font-size: 35px;
+  text-align: center;
+  color: #ff8542;
+}
